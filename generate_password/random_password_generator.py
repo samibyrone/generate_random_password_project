@@ -17,4 +17,4 @@ def is_strong_password(password):
 password = generate_password()
 
 print("\nGenerated Password Result :", password)
-print("\nIs This Strong Password Enough? :", is_strong_password(password))
+print("\nIs This Password Strong Enough? :", is_strong_password(password))

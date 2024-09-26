@@ -29,6 +29,10 @@ class Generate_password(unittest.TestCase):
         password = generate_password()
         self.assertRegex(password, r".*\d.*", "Password should contain at least minimum of one digit")
 
+    def test_that_generate_password_that_contains_special_characters(self):
+        password = generate_password()
+        self.assertRegex(password, ".*[@#$%^&*()-_+=<>?].*", "Password should contain at least minimum of one special character")
+
     def test_password_with_more_than_required_length(self):
         password = "Abcdefghijklmnop1@"
         self.assertTrue(is_strong_password(password), "Password longer than required length and should be strong")
